@@ -26,7 +26,10 @@ body {
     place-items: center;
     margin-bottom: 4em;
 }
-
+h1 {
+    /* margin: 0;
+    padding: 0; */
+}
 a,
 :visited {
     color: #ee6c4d;
@@ -40,10 +43,6 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.navlink,
-.navlink:visited {
-    color: #000;
-}
 
 .highlight {
     background-color: #fee440;
@@ -63,10 +62,6 @@ a:hover {
     place-items: center;
 }
 
-nav img {
-    width: 20px;
-}
-
 .legal {
     color: #b7b7a4;
     font-size: x-small;
@@ -84,6 +79,9 @@ nav img {
     max-width: 1024px;
 }
 
+/*
+    CARD
+*/
 .card {
     color: #3c096c;
     background: #fff;
@@ -97,27 +95,13 @@ nav img {
 .card p {
     text-align: center;
 }
-
-.message {
-    text-align: center;
-    font-style: italic;
+.card h1 {
+    align-self: center;
 }
-
-img {
-    width: 100px;
-}
-
-.content {
-    height: auto;
-    padding: 1rem 2rem;
-}
-
-
 .card,
 .content {
     justify-self: stretch;
 }
-
 @media only screen and (min-width: 768px) {
     .card {
         grid-template-columns: 20% 1fr;
@@ -132,6 +116,21 @@ img {
     #hero2 {
         background-position: center -170px;
     }
+}
+
+/* MISC */
+.message {
+    text-align: center;
+    font-style: italic;
+}
+
+img {
+    width: 100px;
+}
+
+.content {
+    height: auto;
+    padding: 1rem 2rem;
 }
 
 hr {
@@ -192,12 +191,6 @@ h3 {
     --fluid-type-min: 0.6rem;
     --fluid-type-max: 1rem;
 }
-
-
-/* h2,
-h3 {
-  max-width: 30ch;
-} */
 
 p,
 li {

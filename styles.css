@@ -1,0 +1,214 @@
+/* 
+I accomplished my goal, but I wonder if there's a better way to do this? 
+~
+Template: Practice UI 01a
+colors: https://coolors.co/palettes/trending
+
+*/
+
+/* @import url('../css/boska.css');
+@import url('../css/zodiak.css');
+@import url('../css/marasga.css'); */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efefef;
+    color: #777;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin-bottom: 4em;
+}
+
+a,
+:visited {
+    color: #ee6c4d;
+    /* font-family: "Helvetica", sans-serif; */
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+}
+
+a:hover {
+    color: #78290f;
+    transition: all 0.3s ease-in-out;
+}
+
+.navlink,
+.navlink:visited {
+    color: #000;
+}
+
+.highlight {
+    background-color: #fee440;
+    padding: 5px;
+}
+
+#hero {
+    height: 80vh;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    background: transparent url(https://miro.medium.com/v2/resize:fit:4800/format:webp/1*el0MPpVoNBQ9b6tB17g5eA.jpeg) no-repeat center bottom;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    place-items: center;
+}
+
+nav img {
+    width: 20px;
+}
+
+.legal {
+    color: #b7b7a4;
+    font-size: x-small;
+    text-align: center;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    place-items: center;
+    align-items: start;
+    grid-gap: 10px;
+    padding: 0 1em;
+    max-width: 1024px;
+}
+
+.card {
+    color: #3c096c;
+    background: #fff;
+    box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.15);
+    margin-top: -70px;
+    z-index: 10;
+    padding: 2.5rem 1.4rem;
+    display: grid;
+}
+
+.card p {
+    text-align: center;
+}
+
+.message {
+    text-align: center;
+    font-style: italic;
+}
+
+img {
+    width: 100px;
+}
+
+.content {
+    height: auto;
+    padding: 1rem 2rem;
+}
+
+
+.card,
+.content {
+    justify-self: stretch;
+}
+
+@media only screen and (min-width: 768px) {
+    .card {
+        grid-template-columns: 20% 1fr;
+        grid-gap: 1em;
+        padding: 1rem 2em;
+    }
+
+    .card p {
+        text-align: left;
+    }
+
+    #hero2 {
+        background-position: center -170px;
+    }
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 2em 0;
+}
+
+
+/* 
+  Font Clamp  
+  https://piccalil.li/tutorial/fluid-typography-with-css-clamp/
+*/
+
+h1,
+h2,
+h3,
+p,
+li {
+    font-size: clamp(var(--fluid-type-min, 1rem), calc(1rem + var(--fluid-type-target, 3vw)), var(--fluid-type-max, 1.3rem));
+}
+
+h1 {
+    font-family: "Zodiak-Black", serif;
+    --fluid-type-min: 1.3rem;
+    --fluid-type-max: 2rem;
+    --fluid-type-target: 5vw;
+    /*   max-width: 30ch; */
+}
+
+#herocopy {
+    font-family: 'Zodiak-Black', serif;
+    --fluid-type-min: 2.3rem;
+    --fluid-type-max: 3rem;
+    --fluid-type-target: 5vw;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+    color: #fdfdfd;
+    /* max-width: 60ch; */
+    /* padding: 0.8em; */
+}
+
+@media only screen and (max-width: 980px) {
+    #herocopy {
+        align-self: start;
+    }
+}
+
+h2 {
+    font-family: 'Zodiak-Black', serif;
+    --fluid-type-min: 1rem;
+    --fluid-type-max: 1.8rem;
+}
+
+h3 {
+    font-family: 'Zodiak-Black', serif;
+    --fluid-type-min: 0.6rem;
+    --fluid-type-max: 1rem;
+}
+
+
+/* h2,
+h3 {
+  max-width: 30ch;
+} */
+
+p,
+li {
+    /*   max-width: 60ch; */
+    font-family: "Georgia", serif;
+    line-height: 1.8;
+}
+
+li {
+    max-width: 50ch;
+    padding-bottom: 1em;
+}
+
+/* End Font Clamp */

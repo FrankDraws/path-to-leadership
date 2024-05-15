@@ -167,8 +167,9 @@ hr {
 }
 #imgBox {
     margin-top: -4em;
-    display: grid;
+    /* display: grid; */
     width: auto;
+    
 }
 #imgBox img {
     width: 45%;
@@ -178,7 +179,7 @@ hr {
 
 
 /* DESKTOP */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 480px) {
     .card {
         grid-template-columns: 20% 1fr;
         grid-template-rows: none;
@@ -194,7 +195,7 @@ hr {
         text-align: left;
     }
 #imgBox {
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-top: -17px;
     box-shadow: none;
     /* outline: 1px solid red; */
@@ -217,14 +218,16 @@ hr {
         grid-template-columns: auto;
         grid-template-rows: auto;
         height: auto;
-        /* overflow: visible; */
+        overflow: visible;
     }
 
     .card h1 {
         /* Center text  */
         text-align: center;
     }
-
+ #imgBox {
+    display: grid;
+ }
     #imgBox img {
         /* Reduce image size slightly */
         margin: 0 auto;

@@ -38,7 +38,54 @@ a:hover {
     color: #78290f;
     transition: all 0.3s ease-in-out;
 }
+/* 
+    Gemini CSS code for <li>
+    Remove default bullet points */
+ul {
+    list-style-type: none;
+    /* Hides default bullets */
+    padding: 0;
+    /* Reset default padding */
+    margin: 0;
+    /* Reset default margin */
+}
 
+/* Style list items */
+li {
+    display: flex;
+    /* Allow for inline elements */
+    align-items: center;
+    /* Vertically centers content */
+    margin-bottom: 3px;
+    /* Add some spacing between items */
+    padding-left: 30px;
+    /* Add some padding for content */
+    position: relative;
+    /* Needed for icon placement */
+}
+
+/* Style the icon */
+li:before {
+    content: "\f0da";
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    /* font-family: Font Awesome 5 Free; */
+    font: var(--fa-font-solid);
+    font-size: 16px;
+    color: #777;
+    position: absolute;
+    /* Positions the icon */
+    left: 8px;
+}
+
+/* Optional hover effect for the list item */
+li:hover {
+    background-color: #f5f5f5;
+    /* Add a subtle hover background */
+    width: 20%;
+    border-radius: 7px;
+}
 
 .highlight {
     background-color: #fee440;
@@ -86,16 +133,18 @@ a:hover {
     z-index: 10;
     display: grid;
     height: 150px;
-    /* max-height: 150px; */
     overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.card * {
+    grid-column: auto;
 }
 .card img {
-    width: 170px;
-    margin: -1em 0 0 0;
+    /* width: 170px;
+    margin: -1em 0 0 0; */
 }
-#cardTitle {
-    font-size: 3em;
-}
+
 .card p {
     text-align: center;
 }
@@ -114,12 +163,16 @@ a:hover {
     background-repeat: no-repeat;
     background-position: 0 -10px;
 }
+/* DESKTOP */
 @media only screen and (min-width: 768px) {
     .card {
         grid-template-columns: 20% 1fr;
+        grid-template-rows: none;
         grid-gap: 1em;
     }
-
+        #cardTitle {
+            font-size: 3em;
+        }
     .card p {
         text-align: left;
     }
@@ -208,7 +261,6 @@ li {
 
 li {
     max-width: 50ch;
-    padding-bottom: 1em;
 }
 
 /* End Font Clamp */

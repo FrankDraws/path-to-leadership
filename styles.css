@@ -197,7 +197,7 @@ hr {
     overflow: hidden;
     margin-top: -17px;
     box-shadow: none;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 #imgBox img {
     width: 200px;

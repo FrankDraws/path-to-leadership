@@ -1,14 +1,10 @@
 /* 
-I accomplished my goal, but I wonder if there's a better way to do this? 
-~
-Template: Practice UI 01a
-colors: https://coolors.co/palettes/trending
+    Author: Frank J. Quinones
+    website: http://fjbio.carrd.co
 
 */
 
-/* @import url('../css/boska.css');
-@import url('../css/zodiak.css');
-@import url('../css/marasga.css'); */
+
 
 body,
 html {
@@ -26,6 +22,7 @@ body {
     place-items: center;
     margin-bottom: 4em;
 }
+
 #main {
     display: grid;
     grid-template-columns: 1fr;
@@ -36,6 +33,7 @@ body {
     padding: 0 1em;
     max-width: 1024px;
 }
+
 a,
 :visited {
     color: #ee6c4d;
@@ -48,6 +46,7 @@ a:hover {
     color: #78290f;
     transition: all 0.3s ease-in-out;
 }
+
 /* 
     Gemini CSS code for <li>
     Remove default bullet points */
@@ -114,6 +113,7 @@ li:hover {
     grid-template-rows: 50px 1fr;
     place-items: center;
 }
+
 .ftrMsg {
     text-align: center;
     font-style: italic;
@@ -130,6 +130,7 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
     margin: 2em 0;
 }
+
 .legal {
     color: #999;
     font-size: x-small;
@@ -140,6 +141,7 @@ hr {
 
 /*
     CARD
+
 */
 .card {
     display: grid;
@@ -151,6 +153,7 @@ hr {
     /* grid-template-columns: 1fr; */
     /* grid-template-rows: 1fr 1fr; */
 }
+
 .card * {
     grid-column: auto;
 }
@@ -158,19 +161,23 @@ hr {
 .card p {
     text-align: center;
 }
+
 .card h1 {
     align-self: center;
 }
+
 .card,
 .content {
     justify-self: stretch;
 }
+
 #imgBox {
     margin-top: -4em;
     /* display: grid; */
     width: auto;
-    
+
 }
+
 #imgBox img {
     width: 45%;
     margin: auto;
@@ -178,43 +185,59 @@ hr {
 }
 
 
-/* DESKTOP */
+/* 
+    Responsive
+
+*/
+@media only screen and (max-width: 480px) {
+    #cardTitle {
+        margin: 1em;
+    }
+}
+
 @media only screen and (min-width: 480px) {
     .card {
         grid-template-columns: auto 1fr;
         grid-template-rows: none;
         grid-gap: 1em;
-        /* display: grid; */
         height: auto;
         overflow: hidden;
     }
-        #cardTitle {
-            font-size: 3em;
-            margin-left: 1em;
-        }
+
+    #cardTitle {
+        font-size: 3em;
+        /* margin-left: 1em; */
+    }
+
     .card p {
         text-align: left;
     }
-#imgBox {
-    /* overflow: hidden; */
-    margin-top: -17px;
-    /* box-shadow: none; */
-    /* outline: 1px solid red; */
-}
-#imgBox img {
-    width: 200px;
-    box-shadow: none;
-}
+
+    #imgBox {
+        margin-top: -17px;
+        max-height: 200px;
+        /* outline: 1px solid red; */
+    }
+
+    #imgBox img {
+        width: 200px;
+        box-shadow: none;
+    }
 
     #hero2 {
         background-position: center -170px;
     }
 }
 
+@media screen and (min-width: 768px) {
+    #cardTitle {
+        margin-left: 0.4em;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .card {
         /* Reset grid styles for mobile */
-        /* display: block; */
         grid-template-columns: auto;
         grid-template-rows: auto;
         height: auto;
@@ -225,9 +248,11 @@ hr {
         /* Center text  */
         text-align: center;
     }
- #imgBox {
-    display: grid;
- }
+
+    #imgBox {
+        display: grid;
+    }
+
     #imgBox img {
         /* Reduce image size slightly */
         margin: 0 auto;

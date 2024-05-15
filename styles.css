@@ -142,23 +142,17 @@ hr {
     CARD
 */
 .card {
+    display: grid;
     color: #3c096c;
     background: #fff;
     box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.15);
     margin-top: -70px;
     z-index: 10;
-    display: grid;
-    height: 150px;
-    overflow: hidden;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-columns: 1fr; */
+    /* grid-template-rows: 1fr 1fr; */
 }
 .card * {
     grid-column: auto;
-}
-.card img {
-    /* width: 170px;
-    margin: -1em 0 0 0; */
 }
 
 .card p {
@@ -172,19 +166,26 @@ hr {
     justify-self: stretch;
 }
 #imgBox {
-    width: 200px;
-    /* https://fjbio.carrd.co/assets/images/image01.jpg?v=b99d791a */
-    background-image: url(https://fjbio.carrd.co/assets/images/image01.jpg?v=b99d791a);
-    background-size: 93%;
-    background-repeat: no-repeat;
-    background-position: 0 -10px;
+    margin-top: -4em;
+    display: grid;
+    width: auto;
 }
+#imgBox img {
+    width: 45%;
+    margin: auto;
+    box-shadow: 0 0.3rem 0.7rem rgba(0, 0, 0, 0.35);
+}
+
+
 /* DESKTOP */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
     .card {
         grid-template-columns: 20% 1fr;
         grid-template-rows: none;
         grid-gap: 1em;
+        /* display: grid; */
+        height: 150px;
+        overflow: hidden;
     }
         #cardTitle {
             font-size: 3em;
@@ -192,13 +193,43 @@ hr {
     .card p {
         text-align: left;
     }
-
+#imgBox {
+    overflow: hidden;
+    margin-top: -17px;
+    box-shadow: none;
+    outline: 1px solid red;
+}
+#imgBox img {
+    width: 200px;
+}
+#cardTitle {
+    margin-left: 1em;
+}
     #hero2 {
         background-position: center -170px;
     }
 }
 
+@media screen and (max-width: 768px) {
+    .card {
+        /* Reset grid styles for mobile */
+        /* display: block; */
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        height: auto;
+        /* overflow: visible; */
+    }
 
+    .card h1 {
+        /* Center text  */
+        text-align: center;
+    }
+
+    #imgBox img {
+        /* Reduce image size slightly */
+        margin: 0 auto;
+    }
+}
 
 /* 
   Font Clamp  

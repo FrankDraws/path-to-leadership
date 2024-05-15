@@ -146,7 +146,7 @@ hr {
     color: #3c096c;
     background: #fff;
     box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.15);
-    margin-top: -70px;
+    margin: -70px 0 0 0;
     z-index: 10;
     /* grid-template-columns: 1fr; */
     /* grid-template-rows: 1fr 1fr; */
@@ -198,11 +198,12 @@ hr {
 #imgBox {
     /* overflow: hidden; */
     margin-top: -17px;
-    box-shadow: none;
+    /* box-shadow: none; */
     /* outline: 1px solid red; */
 }
 #imgBox img {
     width: 200px;
+    box-shadow: none;
 }
 
     #hero2 {

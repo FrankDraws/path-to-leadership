@@ -106,7 +106,7 @@ li:hover {
     width: 100%;
     z-index: 0;
     overflow: hidden;
-    background: transparent url(https://miro.medium.com/v2/resize:fit:4800/format:webp/1*el0MPpVoNBQ9b6tB17g5eA.jpeg) no-repeat center bottom;
+    background: transparent url(path-hero.jpg) no-repeat center bottom;
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr;
